@@ -253,11 +253,11 @@ sudo tail -n 10 /var/log/syslog
 | VMware Tools 版本 |13.0.10.0（build-25056151） |
 | `open-vm-tools` 是否 active |是 |
 | 桌面分辨率是否能自动调整 | 是|
-| SSH 是否 enabled / active | enable：disabled；active：inactive|
+| SSH 是否 enabled / active | enable：enabled；active：active|
 | 22 端口是否监听 |是 |
 | rsyslog 是否 enabled / active |enabled：enabled；active：active |
 | `/var/log/syslog` 是否出现带学号姓名的测试日志 | 是|
-| 三项组件是否全部验收合格 |合格，但是开机未自启 |
+| 三项组件是否全部验收合格 |合格，全部验收合格 |
 
 ![基础组件状态](imgs/lab1-services.png)
 
@@ -276,7 +276,7 @@ sudo tail -n 10 /var/log/syslog
 
 简要说明你遇到的问题、解决方法，以及当前环境是否可以继续完成后续实验：
 
-> 填写：SSH端口正常监听，但默认不设置开机自启，已更换国内清华镜像源，sudo apt update执行成功。虚拟机网络、DNS解析正常，硬件配置达标，rsyslog日志功能正常。当前环境验收合格，可以继续完成后续实验。
+> 填写：初始SSH服务未设置开机自启，使用sudo systemctl enable ssh配置开机自启，sudo systemctl start ssh启动服务；已更换国内清华镜像源，sudo apt update执行成功。虚拟机网络、DNS解析正常，硬件配置达标，VMware‑Tools、rsyslog、ssh日志功能均正常。当前环境验收合格，可以继续完成后续实验
 
 ---
 
